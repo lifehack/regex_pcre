@@ -8,7 +8,7 @@ static char* substr(const char*str, unsigned start, unsigned end)
 { 
 	unsigned n = end - start; 
 	static char stbuf[256]; 
-	strncpy_s(stbuf, str + start, n); 
+	strncpy_s(stbuf, 256, str + start, n); 
 	stbuf[n] = 0; 
 	return stbuf; 
 }
